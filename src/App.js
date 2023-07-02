@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Costs from "./components/Costs";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const costs = [
+		{
+			date: new Date(2021, 2, 12),
+			description: "Холодильник",
+			amount: 999.99,
+		},
+		{
+			date: new Date(2022, 3, 3),
+			description: "Носки",
+			amount: 9.0,
+		},
+		{
+			date: new Date(2023, 4, 14),
+			description: "Джинсы",
+			amount: 59.99,
+		},
+	];
+
+	return (
+		<div>
+			<h1>Начнем изучение ReactJS</h1>
+			<Costs costs={costs}/>
+		</div>
+	);
 }
 
 export default App;
